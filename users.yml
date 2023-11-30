@@ -7,16 +7,15 @@ metadata:
     name: users
     application: ticket-system
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
     - name: http
       port: 80
       protocol: TCP
       targetPort: http
-      nodePort: 30036
   selector:
-    name: users
     application: ticket-system
+    name: users
 ---
 # Users Deployment
 apiVersion: apps/v1

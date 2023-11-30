@@ -7,8 +7,7 @@ metadata:
     name: movies
     application: ticket-system
 spec:
-  clusterIP: None
-  sessionAffinity: None
+  type: ClusterIP
   ports:
     - name: http
       port: 80
